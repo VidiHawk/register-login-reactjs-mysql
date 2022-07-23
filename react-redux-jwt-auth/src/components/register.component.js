@@ -49,7 +49,7 @@ const vpassword = (value) => {
 
 class Register extends Component {
   constructor(props) {
-    // super(props);
+    super(props);
     this.handleRegister = this.handleRegister.bind(this);
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);

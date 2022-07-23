@@ -1,4 +1,9 @@
-# Node.js – JWT Authentication & Authorization example with JSONWebToken & Sequelize
+# Node.js – JWT Authentication & Authorization with JSONWebToken & Sequelize
+
+## Settings
+
+- User login token set to expire after 24 hours. To extend this period, update node-js-jwt-auth/app/controllers/auth.controller.js 
+
 
 ## User Registration, User Login and Authorization process.
 The diagram shows flow of how we implement User Registration, User Login and Authorization process.
@@ -49,4 +54,12 @@ npm install
 ### Run
 ```
 node server.js
+```
+
+### Install mysql on Ubuntu 20.04:
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
+
+```
+create database db_name;
 ```
