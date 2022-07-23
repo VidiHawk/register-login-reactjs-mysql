@@ -1,5 +1,32 @@
 # Node.js – JWT Authentication & Authorization with JSONWebToken & Sequelize
 
+## Project setup
+```
+npm install
+```
+
+### Run
+```
+node server.js
+```
+
+### Install mysql on Ubuntu 20.04:
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
+
+```
+create database db_name;
+```
+
+### Initialize the db:
+
+You need to run following SQL script:
+```
+mysql> INSERT INTO roles VALUES (1, 'user', now(), now());
+mysql> INSERT INTO roles VALUES (2, 'moderator', now(), now());
+mysql> INSERT INTO roles VALUES (3, 'admin', now(), now());
+```
+
 ## Settings
 
 - User login token set to expire after 24 hours. To extend this period, update node-js-jwt-auth/app/controllers/auth.controller.js 
@@ -46,20 +73,3 @@ Integration on same Server/Port:
 
 > [Integrate React with Node.js Express](https://www.bezkoder.com/integrate-react-express-same-server-port/)
 
-## Project setup
-```
-npm install
-```
-
-### Run
-```
-node server.js
-```
-
-### Install mysql on Ubuntu 20.04:
-
-https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
-
-```
-create database db_name;
-```

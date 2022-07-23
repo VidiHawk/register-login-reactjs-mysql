@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:8081",
 };
 
 app.use(cors(corsOptions));
@@ -28,12 +28,12 @@ db.sequelize.sync();
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to Vidi FX platform." });
 });
 
 // routes
-require('./app/routes/auth.routes')(app);
-require('./app/routes/user.routes')(app);
+require("./app/routes/auth.routes")(app);
+require("./app/routes/user.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
@@ -44,16 +44,16 @@ app.listen(PORT, () => {
 function initial() {
   Role.create({
     id: 1,
-    name: "user"
+    name: "user",
   });
- 
+
   Role.create({
     id: 2,
-    name: "moderator"
+    name: "moderator",
   });
- 
+
   Role.create({
     id: 3,
-    name: "admin"
+    name: "admin",
   });
 }
